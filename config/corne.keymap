@@ -21,8 +21,8 @@
 
             bindings = <
 &kp TAB    &kp F  &kp L  &kp H     &kp V  &kp Z        &kp SINGLE_QUOTE  &kp W  &kp U      &kp O    &kp Y     &kp BSPC
-&kp LSHFT  &kp S  &kp R  &kp N     &kp T  &kp K        &kp C             &kp D  &kp E      &kp A    &kp I     &kp SEMI
-&kp LCTRL  &kp X  &kp J  &kp B     &kp M  &kp Q        &kp P             &kp G  &kp COMMA  &kp DOT  &kp FSLH  &kp ESC
+&kp LCTRL  &kp S  &kp R  &kp N     &kp T  &kp K        &kp C             &kp D  &kp E      &kp A    &kp I     &kp SEMI
+&kp LSHFT  &kp X  &kp J  &kp B     &kp M  &kp Q        &kp P             &kp G  &kp COMMA  &kp DOT  &kp FSLH  &kp ESC
                          &kp LGUI  &mo 1  &kp SPACE    &kp RET           &mo 2  &kp RALT
             >;
 
@@ -31,23 +31,6 @@
 
         lower_layer {
             // -----------------------------------------------------------------------------------------
-            // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
-            // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
-            // | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
-            //                    | GUI |     | SPC |   | ENT |     | ALT |
-
-            bindings = <
-&kp TAB     &kp N1        &kp N2        &kp N3        &kp N4        &kp N5          &kp N6       &kp N7      &kp N8    &kp N9     &kp N0  &kp BSPC
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &kp LEFT     &kp DOWN    &kp UP    &kp RIGHT  &trans  &trans
-&kp LCTRL   &trans        &trans        &trans        &sys_reset    &bootloader     &bootloader  &sys_reset  &trans    &trans     &trans  &trans
-                                        &kp LGUI      &trans        &kp SPACE       &kp RET      &trans      &kp RALT
-            >;
-
-            label = "lower";
-        };
-
-        raise_layer {
-            // -----------------------------------------------------------------------------------------
             // |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
             // | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
             // | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
@@ -55,9 +38,26 @@
 
             bindings = <
 &kp TAB    &kp EXCL  &kp AT  &kp HASH  &kp DLLR          &kp LPAR     &kp RPAR  &kp AMPS  &kp KP_MULTIPLY  &kp CARET  &trans         &kp BSPC
-&kp LSHFT  &trans    &trans  &trans    &kp PRCNT         &kp LBKT     &kp RBKT  &kp PLUS  &kp MINUS        &kp EQUAL  &kp PIPE       &kp GRAVE
-&kp LCTRL  &trans    &trans  &trans    &kp SINGLE_QUOTE  &kp LBRC     &kp RBRC  &trans    &kp UNDER        &kp RALT   &kp BACKSLASH  &kp TILDE
+&kp LALT   &trans    &trans  &trans    &kp PRCNT         &kp LBKT     &kp RBKT  &kp PLUS  &kp MINUS        &kp EQUAL  &kp PIPE       &kp GRAVE
+&kp LSHFT  &trans    &trans  &trans    &kp SINGLE_QUOTE  &kp LBRC     &kp RBRC  &trans    &kp UNDER        &kp RALT   &kp BACKSLASH  &kp TILDE
                              &kp LGUI  &trans            &kp SPACE    &kp RET   &trans    &kp RALT
+            >;
+
+            label = "lower";
+        };
+
+        raise_layer {
+            // -----------------------------------------------------------------------------------------
+            // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
+            // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
+            // | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
+            //                    | GUI |     | SPC |   | ENT |     | ALT |
+
+            bindings = <
+&kp TAB    &kp N1        &kp N2        &kp N3        &kp N4        &kp N5          &kp N6       &kp N7      &kp N8    &kp N9     &kp N0  &kp BSPC
+&kp LCTRL  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &kp LEFT     &kp DOWN    &kp UP    &kp RIGHT  &trans  &trans
+&kp LSHFT  &trans        &trans        &bt BT_CLR    &sys_reset    &bootloader     &bootloader  &sys_reset  &trans    &trans     &trans  &trans
+                                       &kp LGUI      &trans        &kp SPACE       &kp RET      &trans      &kp RALT
             >;
 
             label = "raise";

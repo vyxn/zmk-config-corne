@@ -34,10 +34,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp TAB    &kp F  &kp L  &kp H     &kp V  &kp Z        &kp SINGLE_QUOTE  &kp W  &kp U      &kp O    &kp Y     &kp BSPC
-&kp LCTRL  &kp S  &kp R  &kp N     &kp T  &kp K        &kp C             &kp D  &kp E      &kp A    &kp I     &kp SEMI
-&kp LSHFT  &kp X  &kp J  &kp B     &kp M  &kp Q        &kp P             &kp G  &kp COMMA  &kp DOT  &kp FSLH  &kp ESC
-                         &kp LGUI  &mo 1  &kp SPACE    &kp RET           &mo 2  &kp RALT
+&kp TAB    &kp F           &kp L           &kp H         &kp V        &kp Z        &kp SINGLE_QUOTE  &kp W        &kp U         &kp O            &kp Y            &kp BSPC
+&kp LCTRL  &mt LEFT_GUI S  &mt LEFT_ALT R  &mt LSHIFT N  &mt LCTRL T  &kp K        &kp C             &mt RCTRL D  &mt RSHIFT E  &mt RIGHT_ALT A  &mt RIGHT_GUI I  &kp SEMI
+&kp LSHFT  &kp X           &kp J           &kp B         &kp M        &kp Q        &kp P             &kp G        &kp COMMA     &kp DOT          &kp FSLH         &kp ESC
+                                           &kp LGUI      &mo 1        &kp SPACE    &kp RET           &mo 2        &kp RALT
             >;
 
             label = "base";
